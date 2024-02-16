@@ -12,7 +12,7 @@ const Planets = () => {
                 
             <h1>Planets</h1>
             <div className="row flex row flex-nowrap" style={{overflowX:"auto", overflowY:"hidden",whiteSpace:"nowrap",padding:"2rem", display:"flex"}}>
-            {store.planets.map((item, index) => (
+                        {store.planets.map((item, index) => (
                     
                         <div className="card m-3" style={{width: "400px"}}>
                         <img src="" 
