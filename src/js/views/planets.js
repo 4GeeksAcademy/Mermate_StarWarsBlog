@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { Context } from "../store/appContext";
+import { Link } from "react-router-dom";
 
 
 const Planets = () => {
@@ -26,9 +27,10 @@ const Planets = () => {
                             <p className="card-text">Terrain : {item.terrain}</p>
                             <p className="card-text">Population: {item.population}</p>
 
-                           
+                         <Link to={"/planetDetail/" + index}> 
                          <button className="btn btn-outline-primary">Learn more!</button>
-
+                        </Link>  
+                        
                          <button style={{float:"right"}}onClick={()=>actions.favorites(item.name)}>
 
                         {/* Hacemos una llamada a la función de Flux heartColor para que cambie el color del corazón al hacer click en el */}
