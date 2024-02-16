@@ -14,7 +14,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 				}
 			],
 
-			characters:[]
+			characters:[],
+			planets:[],
+			
 
 		},
 		actions: {
@@ -24,11 +26,17 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 			loadSomeData: () => {
 
-				//get characters
+				//get characters from API
 
 				fetch("https://swapi.dev/api/people/")
 				.then((response=> response.json()))
 				.then((data)=> setStore({ characters: data.results })
+				)
+
+                //get planets from API
+				fetch("https://swapi.dev/api/planets/")
+				.then((response=> response.json()))
+				.then((data)=> setStore({ planets: data.results })
 				)
 
 
