@@ -17,13 +17,43 @@ const getState = ({ getStore, getActions, setStore }) => {
 			characters:[],
 			planets:[],
 			starships:[],
+			favorites:[],
 			
 
 		},
 		actions: {
+
 			// Use getActions to call a function within a fuction
-			exampleFunction: () => {
-				getActions().changeColor(0, "green");
+			
+            //Función para filtrar y mostrar los favoritos en el navbar
+				favorites: (favoriteName) => {
+				
+				//get the store
+				const store = getStore();
+
+				// conditional 
+
+				if(store.favorites.includes(favoriteName)){
+					//console.log("it is in the list")
+					//delete from the list
+					setStore({ favorites: [...store.favorites.filter((added)=>added!=favoriteName)] });
+
+
+				} else{
+					console.log(" it is Not in the list")
+
+					 // shows the name of the starships save as a favorite
+				setStore({ favorites: [...store.favorites , favoriteName ] });
+				}
+           
+				console.log(store.favorites)
+			},
+
+			
+			//Función que comprueba si el array contiene el nombre para luego cambiar el color del corazón
+			heartColor: name => {
+				const store = getStore();
+				return store.favorites.includes(name);
 			},
 			loadSomeData: () => {
 
@@ -35,7 +65,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				)
 
                 //get planets from API
-				
+
 				fetch("https://swapi.dev/api/planets/")
 				.then((response=> response.json()))
 				.then((data)=> setStore({ planets: data.results })
