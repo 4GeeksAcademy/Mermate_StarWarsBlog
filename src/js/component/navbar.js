@@ -15,7 +15,7 @@ export const Navbar = () => {
 				
 			<div className="btn-group favorites_button">
 
-				<button type="button" className="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+				<button type="button" className="btn btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
 					Favorites {store.favorites.length}
 				</button>
 

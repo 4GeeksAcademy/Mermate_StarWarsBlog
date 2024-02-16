@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { Context } from "../store/appContext";
+import { Link } from "react-router-dom";
 
 
 const Characters = () => {
@@ -26,9 +27,10 @@ const Characters = () => {
                             <p className="card-text">Hair Color : {item.hair_color}</p>
                             <p className="card-text">Eye Color: {item.eye_color}</p>
 
-                           
+                         <Link to={"/characterDetail/ " + index}> 
                          <button className="btn btn-outline-primary">Learn more!</button>
-                         
+                         </Link>
+
                          <button style={{float:"right"}}onClick={()=>actions.favorites(item.name)}>
 
                         {/* Hacemos una llamada a la función de Flux heartColor para que cambie el color del corazón al hacer click en el */}
