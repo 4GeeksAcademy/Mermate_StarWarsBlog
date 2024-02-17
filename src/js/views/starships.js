@@ -27,7 +27,7 @@ const Starships = () => {
                             <p className="card-text">Speed : {item.max_atmosphering_speed}</p>
                             <p className="card-text">Crew: {item.crew}</p>
 
-                        <Link to={"/starshipDetail/ " + index}>  
+                        <Link to={"/starshipDetail/" + index}>  
                          <button className="btn btn-outline-primary">Learn more!</button>
                         </Link>
                          <button style={{float:"right"}}onClick={()=>actions.favorites(item.name)}>

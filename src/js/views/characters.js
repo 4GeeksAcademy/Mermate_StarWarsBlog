@@ -27,7 +27,7 @@ const Characters = () => {
                             <p className="card-text">Hair Color : {item.hair_color}</p>
                             <p className="card-text">Eye Color: {item.eye_color}</p>
 
-                         <Link to={"/characterDetail/ " + index}> 
+                         <Link to={"/characterDetail/" + index}> 
                          <button className="btn btn-outline-primary">Learn more!</button>
                          </Link>
 

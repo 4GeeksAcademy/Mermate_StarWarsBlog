@@ -19,7 +19,7 @@ export const StarshipDetail  = () => {
                     </div>
 
                     <div className="col-4 info_starship">
-                        <h2>Starship Name</h2>
+                    <h2>{store.starships[params.starship].name}</h2>
                         <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vitae tortor non nibh fermentum lacinia aliquet quis ipsum. Nam interdum auctor eros, ut venenatis ex pulvinar at. Donec finibus tortor turpis, non semper purus ultricies porttitor. Proin bibendum euismod tristique. Proin finibus lacus sit amet orci sagittis vestibulum. Morbi a lectus sed velit pretium lobortis vitae ut tortor. Curabitur a luctus felis, gravida porttitor tortor. Duis a justo neque. Integer at risus sed risus convallis lacinia vitae efficitur elit. Pellentesque imperdiet ex a quam elementum commodo. Mauris eu posuere nunc. Morbi ac velit vel mauris lacinia tempus. Aliquam erat volutpat. Nulla semper iaculis est at eleifend.</p>
                     </div>
@@ -33,17 +33,21 @@ export const StarshipDetail  = () => {
                                         <th scope="col">Name</th>
                                         <th scope="col">Model</th>
                                         <th scope="col">Class</th>
-                                        <th scope="col">passengers</th>
-                                        <th scope="col">crew</th>
+                                        <th scope="col">Passengers</th>
+                                        <th scope="col">Crew</th>
                                         <th scope="col">Speed</th>
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <tr>
-                                    <tr>
+                                   
                                        
-                                    </tr>
-                                       
+                                    <tr>
+                                        <td>{store.starships[params.starship].name}</td>
+                                        <td>{store.starships[params.starship].model}</td>
+                                        <td>{store.starships[params.starship].starship_class}</td>
+                                        <td>{store.starships[params.starship].passengers}</td>
+                                        <td>{store.starships[params.starship].crew}</td>
+                                        <td>{store.starships[params.starship].max_atmosphering_speed}</td>
                                     </tr>
                                 </tbody>
                             </table>

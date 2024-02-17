@@ -19,7 +19,7 @@ export const CharacterDetail  = () => {
                     </div>
 
                     <div className="col-4 info_character">
-                        <h2>Character Name</h2>
+                         <h2>{store.characters[params.character].name}</h2>
                         <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vitae tortor non nibh fermentum lacinia aliquet quis ipsum. Nam interdum auctor eros, ut venenatis ex pulvinar at. Donec finibus tortor turpis, non semper purus ultricies porttitor. Proin bibendum euismod tristique. Proin finibus lacus sit amet orci sagittis vestibulum. Morbi a lectus sed velit pretium lobortis vitae ut tortor. Curabitur a luctus felis, gravida porttitor tortor. Duis a justo neque. Integer at risus sed risus convallis lacinia vitae efficitur elit. Pellentesque imperdiet ex a quam elementum commodo. Mauris eu posuere nunc. Morbi ac velit vel mauris lacinia tempus. Aliquam erat volutpat. Nulla semper iaculis est at eleifend.</p>
                     </div>
@@ -37,11 +37,16 @@ export const CharacterDetail  = () => {
                                         <th scope="col">Skin color</th>
                                         <th scope="col">Eye color</th>
                                     </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr>
-                                       
-                                    </tr>
+                                </thead>
+                                 <tbody>
+                                     <tr>
+                                            <td>{store.characters[params.character].name}</td>
+                                            <td>{store.characters[params.character].birth_year}</td>
+                                            <td>{store.characters[params.character].gender}</td>
+                                            <td>{store.characters[params.character].height}</td>
+                                            <td>{store.characters[params.character].skin_color}</td>
+                                            <td>{store.characters[params.character].eye_color}</td>
+                                     </tr>
                                 </tbody>
                             </table>
                         </div>
