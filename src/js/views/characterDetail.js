@@ -2,6 +2,8 @@ import React, { useState, useEffect, useContext } from "react";
 import { Link, useParams } from "react-router-dom";
 import PropTypes from "prop-types";
 import { Context } from "../store/appContext";
+import DetailImage from "../../img/800x600.png";
+
 
 
 export const CharacterDetail  = () => {
@@ -15,7 +17,7 @@ export const CharacterDetail  = () => {
             <div className="container-flex text-center general">
                 <div className="row align-items-center">
                     <div className="col-6">
-                        <img className="img_Character_Detail" src=""></img>
+                    <img src={DetailImage} className="mb-3" alt="..." style={{width: '600px'}} />
                     </div>
 
                     <div className="col-4 info_character">

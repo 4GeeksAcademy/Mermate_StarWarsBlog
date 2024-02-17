@@ -1,6 +1,9 @@
 import React, { useContext } from "react";
 import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
+import cardImage from "../../img/400x200.png";
+
+
 
 
 const Characters = () => {
@@ -15,11 +18,8 @@ const Characters = () => {
             <div className="row flex row flex-nowrap" style={{overflowX:"auto", overflowY:"hidden",whiteSpace:"nowrap",padding:"2rem", display:"flex"}}>
                         {store.characters.map((item, index) => (
                     
-                        <div className="card m-3" style={{width: "400px"}}>
-                        <img src="" 
-
-                        className="card-img-top" 
-                        alt="..."/>
+                        <div className="card m-3 "  style={{width: "400px"}}>
+                        <img src={ cardImage} className="card-img-top mt-3" alt="..."/>
 
                         <div className="card-body">
                             <h5 className="card-title">{item.name}</h5>
