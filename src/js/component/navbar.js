@@ -1,6 +1,8 @@
 import React ,{useContext}from "react";
 import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
+import logoStarWars from "../../img/SWlogo1.png";
+import "../../styles/navbar.css";
 
 export const Navbar = () => {
 
@@ -9,7 +11,9 @@ export const Navbar = () => {
 	return (
 		<nav className="navbar navbar-light bg-light mb-3">
 			<Link to="/">
-				<span className="navbar-brand mb-0 h1"></span>
+				<span className="navbar-brand mb-0 h1">
+				<img className="imageLogo" src={logoStarWars}></img>	
+				</span>
 			</Link>
 			<div className="ml-auto">
 				

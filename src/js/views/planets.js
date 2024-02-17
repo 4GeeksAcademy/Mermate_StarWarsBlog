@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
 import cardImage from "../../img/400x200.png";
+import "../../styles/cards.css";
 
 const Planets = () => {
 
